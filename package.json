@@ -1,0 +1,41 @@
+{
+  "name": "rollup-starter",
+  "version": "1.0.0",
+  "description": "rollup starter kit",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run clean && npm run rollup-prod && npm run copy",
+    "clean": "rm -rf dist",
+    "copy": "cp src/index.html dist/index.html",
+    "lite-server": "lite-server --config bs.config.js",
+    "rollup": "rollup -c rollup.config.js",
+    "rollup-prod": "rollup -c rollup.config.prod.js",
+    "rollup-watch": "npm run rollup -- --watch",
+    "start": "npm run rollup && npm run copy && concurrently \"npm run lite-server\" \"npm run rollup-watch\"",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beginor/rollup-starter.git"
+  },
+  "keywords": [
+    "rollup",
+    "starter"
+  ],
+  "author": "beginor <beginor@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beginor/rollup-starter/issues"
+  },
+  "homepage": "https://github.com/beginor/rollup-starter#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "lite-server": "^2.3.0",
+    "rollup": "^0.55.3",
+    "rollup-plugin-alias": "^1.4.0",
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-css-only": "^0.4.0",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}
