@@ -28,15 +28,15 @@
   },
   "homepage": "https://github.com/beginor/rollup-starter#readme",
   "devDependencies": {
-    "concurrently": "^3.5.1",
-    "lite-server": "^2.3.0",
-    "rollup": "^0.58.0",
+    "concurrently": "^4.0.1",
+    "lite-server": "^2.4.0",
+    "rollup": "^0.66.1",
     "rollup-plugin-alias": "^1.4.0",
-    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-css-only": "^0.4.0",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-typescript2": "0.13.0",
-    "rollup-plugin-uglify": "^3.0.0",
-    "typescript": "^2.8.1"
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-typescript2": "0.17.0",
+    "rollup-plugin-uglify": "^6.0.0",
+    "typescript": "^2.9.2"
   }
 }

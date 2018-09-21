@@ -31,6 +31,6 @@ export default {
         commonjs({
             include: []
         }),
-        production && uglify()
+        production && uglify.uglify()
     ]
 }
