@@ -23,11 +23,13 @@ export default {
     external: [],
     plugins: [
         typescript({
-            tsconfig: 'tsconfig.json'
+            tsconfig: 'tsconfig.json',
+            cacheRoot: './dist',
+            clean: true
         }),
         css({ output: './dist/bundle.css' }),
         alias({}),
-        nodeResolve({ jsnext: true, module: true }),
+        nodeResolve({ mainFields: ['module', 'jsnext:main', 'main'] }),
         commonjs({
             include: []
         }),
