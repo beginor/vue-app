@@ -4,7 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import css from 'rollup-plugin-css-only';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript2';
-import uglify from 'rollup-plugin-uglify';
+import terser from 'rollup-plugin-terser';
 
 // `npm run build` -> `production` is true
 // `npm run dev` -> `production` is false
@@ -33,6 +33,6 @@ export default {
         commonjs({
             include: []
         }),
-        production && uglify.uglify()
+        production && terser.terser({})
     ]
 }
