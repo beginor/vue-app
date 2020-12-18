@@ -34,5 +34,6 @@ export default {
             include: []
         }),
         production && terser.terser({})
-    ]
+    ],
+    preserveEntrySignatures: false
 }
