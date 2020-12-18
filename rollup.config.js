@@ -1,9 +1,9 @@
 import rollup from 'rollup';
-import alias from 'rollup-plugin-alias';
-import commonjs from 'rollup-plugin-commonjs';
+import alias from '@rollup/plugin-alias';
+import commonjs from '@rollup/plugin-commonjs';
+import nodeResolve from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
-import nodeResolve from 'rollup-plugin-node-resolve';
-import typescript from 'rollup-plugin-typescript2';
 import terser from 'rollup-plugin-terser';
 
 // `npm run build` -> `production` is true
@@ -24,8 +24,7 @@ export default {
     plugins: [
         typescript({
             tsconfig: 'tsconfig.json',
-            cacheRoot: './dist',
-            clean: true
+            sourceMap: !production
         }),
         css({ output: './dist/bundle.css' }),
         alias({}),
