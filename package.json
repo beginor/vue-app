@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "build": "npm run clean && npm run rollup && npm run copy",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && mkdir dist",
     "copy": "cp src/index.html dist/index.html",
     "browser-sync": "browser-sync start --config bs-config.js",
     "rollup": "rollup -c rollup.config.js",
