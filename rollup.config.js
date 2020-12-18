@@ -15,8 +15,9 @@ console.log('ROLLUP_WATCH: ' + process.env.ROLLUP_WATCH)
 export default {
     input: './src/main.ts',
     output: {
-        format: 'iife',
-        file: './dist/bundle.js',
+        dir: 'dist',
+        chunkFileNames: "chunks/[name]-[hash].js",
+        format: 'es',
         sourcemap: !production
     },
     treeshake: production,
@@ -26,7 +27,7 @@ export default {
             tsconfig: 'tsconfig.json',
             sourceMap: !production
         }),
-        css({ output: './dist/bundle.css' }),
+        css({ output: 'main.css' }),
         alias({}),
         nodeResolve({ mainFields: ['module', 'jsnext:main', 'main'] }),
         commonjs({
