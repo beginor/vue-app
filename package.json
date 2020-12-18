@@ -10,7 +10,7 @@
     "browser-sync": "browser-sync start --config bs-config.js",
     "rollup": "rollup -c rollup.config.js",
     "rollup-watch": "npm run rollup -- --watch",
-    "start": "npm run rollup && npm run copy && concurrently \"npm run browser-sync\" \"npm run rollup-watch\"",
+    "start": "npm run clean && npm run copy && concurrently \"npm run browser-sync\" \"npm run rollup-watch\"",
     "test": "test"
   },
   "repository": {
