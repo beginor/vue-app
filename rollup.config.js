@@ -11,7 +11,7 @@ import { terser } from 'rollup-plugin-terser';
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-    input: ['./src/main.ts'],
+    input: ['./src/main.js'],
     output: {
         dir: 'dist',
         chunkFileNames: "chunks/[name]-[hash].js",
@@ -21,10 +21,10 @@ export default {
     treeshake: production,
     external: [],
     plugins: [
-        typescript({
-            tsconfig: 'tsconfig.json',
-            sourceMap: !production
-        }),
+        // typescript({
+        //     tsconfig: 'tsconfig.json',
+        //     sourceMap: !production
+        // }),
         css({ output: 'main.css' }),
         alias({}),
         nodeResolve({ mainFields: ['module', 'jsnext:main', 'main'] }),

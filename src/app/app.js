@@ -1,8 +1,15 @@
 export class App {
 
+    /** @type {string} app title */
+    title;
+
     constructor() { }
 
-    public run(): void {
+    /**
+     * run the app.
+     */
+    run() {
+        this.title
         console.log('Hello, Rollup!');
     }
 

@@ -1,19 +1,22 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "target": "ESNext",
     "module": "ESNext",
-    "lib": ["DOM", "ESNext", "ScriptHost", "WebWorker"],
-    "importHelpers": true
+    "lib": ["DOM", "ESNext"],
+    "rootDir": "./",
+    "outDir": "dist",
+    "noEmit": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "build"
   ]
 }
