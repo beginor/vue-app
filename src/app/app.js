@@ -1,7 +1,7 @@
 export class App {
 
     /** @type {string} app title */
-    title;
+    title = '';
 
     constructor() { }
 
@@ -9,7 +9,6 @@ export class App {
      * run the app.
      */
     run() {
-        this.title
         console.log('Hello, Rollup!');
     }
 
