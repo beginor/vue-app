@@ -1,4 +1,4 @@
-import rollup from 'rollup';
+import { rollup } from 'rollup';
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
@@ -10,10 +10,8 @@ import terser from 'rollup-plugin-terser';
 // `npm run dev` -> `production` is false
 const production = !process.env.ROLLUP_WATCH;
 
-console.log('ROLLUP_WATCH: ' + process.env.ROLLUP_WATCH)
-
 export default {
-    input: './src/main.ts',
+    input: ['./src/main.ts'],
     output: {
         dir: 'dist',
         chunkFileNames: "chunks/[name]-[hash].js",
