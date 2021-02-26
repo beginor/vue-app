@@ -1,23 +1,17 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "checkJs": true,
-    "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "target": "ESNext",
     "module": "ESNext",
     "lib": ["DOM", "ESNext"],
-    "rootDir": "./",
-    "outDir": "dist",
-    "noEmit": true,
     "strict": true
   },
   "include": [
-    "src/**/*.js"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "build"
+    "dist"
   ]
 }
