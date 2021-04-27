@@ -1,6 +1,6 @@
-import { App } from './app/app'
-
 import './main.css';
 
-var app = new App();
-app.run();
+import('./app/app').then(m => {
+    var app = new m.App();
+    app.run();
+});
