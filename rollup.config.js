@@ -1,4 +1,3 @@
-import { rollup } from 'rollup';
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
@@ -24,12 +23,11 @@ export default {
     typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
     css({ output: 'main.css' }),
     alias({}),
-    nodeResolve({ mainFields: ['module', 'jsnext:main', 'main'] }),
+    nodeResolve({ mainFields: ['module', 'main'] }),
     commonjs({
       include: []
     }),
     production && terser({
-      compress: true,
       format: { comments: false }
     })
   ],
