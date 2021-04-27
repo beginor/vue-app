@@ -11,24 +11,27 @@ import { terser } from 'rollup-plugin-terser';
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-    input: ['./src/main.ts'],
-    output: {
-        dir: 'dist',
-        chunkFileNames: "chunks/[name]-[hash].js",
-        format: 'es',
-        sourcemap: !production
-    },
-    treeshake: production,
-    external: [],
-    plugins: [
-        typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
-        css({ output: 'main.css' }),
-        alias({}),
-        nodeResolve({ mainFields: ['module', 'jsnext:main', 'main'] }),
-        commonjs({
-            include: []
-        }),
-        production && terser({})
-    ],
-    preserveEntrySignatures: false
+  input: ['./src/main.ts'],
+  output: {
+    dir: 'dist',
+    chunkFileNames: "chunks/[name]-[hash].js",
+    format: 'es',
+    sourcemap: !production
+  },
+  treeshake: production,
+  external: [],
+  plugins: [
+    typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
+    css({ output: 'main.css' }),
+    alias({}),
+    nodeResolve({ mainFields: ['module', 'jsnext:main', 'main'] }),
+    commonjs({
+      include: []
+    }),
+    production && terser({
+      compress: true,
+      format: { comments: false }
+    })
+  ],
+  preserveEntrySignatures: false
 }
