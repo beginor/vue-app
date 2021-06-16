@@ -1,7 +1,7 @@
 export class App {
 
     /** app title */
-    title: string = '';
+    public title = '';
 
     constructor() { }
 

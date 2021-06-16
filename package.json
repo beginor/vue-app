@@ -28,10 +28,13 @@
   },
   "homepage": "https://github.com/beginor/rollup-starter#readme",
   "dependencies": {
-    "tslib": "^2.2.0"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "rollup": "^2.51.1",
+    "eslint": "^7.28.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "rollup": "^2.51.2",
     "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
