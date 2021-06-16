@@ -8,7 +8,7 @@ export class App {
     /**
      * run the app.
      */
-    run() {
+    public run(): void {
         console.log('Hello, Rollup!');
     }
 
