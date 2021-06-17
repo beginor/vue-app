@@ -12,7 +12,7 @@
   <script src="./index.js"></script>
   <script>
   loadScripts([
-  { type: 'importmap', src: `./importmap.${isProd()?'prod.json':'json'}` },
+    { type: 'importmap', src: `./importmap.${isProd()?'prod.json':'json'}` },
     { type: 'module', src: './dist/main.js' }
   ]).catch(ex => console.error(ex));
   </script>

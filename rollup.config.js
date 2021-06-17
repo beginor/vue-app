@@ -20,7 +20,9 @@ export default {
   },
   watch: { buildDelay: 500 },
   treeshake: production,
-  external: ['tslib', 'bootstrap', '@popperjs/core'],
+  external: [
+    'tslib', 'bootstrap', '@popperjs/core'
+  ],
   plugins: [
     typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
     css({ output: 'main.css' }),
