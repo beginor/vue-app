@@ -13,7 +13,7 @@ export default {
   input: ['./src/main.ts'],
   output: {
     dir: 'dist',
-    chunkFileNames: "chunks/[name]-[hash].js",
+    chunkFileNames: production ? "chunks/[name]-[hash].js" : "chunks/[name].js",
     format: 'es',
     sourcemap: !production
   },
