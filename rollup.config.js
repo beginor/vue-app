@@ -4,6 +4,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import { terser } from 'rollup-plugin-terser';
+import vue from 'rollup-plugin-vue';
 
 // `npm run build` -> `production` is true
 // `npm run dev` -> `production` is false
@@ -21,9 +22,11 @@ export default {
   watch: { buildDelay: 500 },
   treeshake: production,
   external: [
-    'tslib', 'bootstrap', '@popperjs/core'
+    'tslib', 'bootstrap', '@popperjs/core',
+    'vue', 'vue-router'
   ],
   plugins: [
+    vue({}),
     typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
     css({ output: 'main.css' }),
     alias({}),

@@ -2,6 +2,8 @@
   "imports": {
     "tslib": "./dist/libs/tslib/tslib.js",
     "bootstrap": "./dist/libs/bootstrap/js/bootstrap.esm.js",
-    "@popperjs/core": "./dist/libs/@popperjs/core.js"
+    "@popperjs/core": "./dist/libs/@popperjs/core.js",
+    "vue": "./dist/libs/vue/vue.js",
+    "vue-router": "./dist/libs/vue/vue-router.js"
   }
 }
