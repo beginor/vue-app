@@ -5,7 +5,7 @@ module.exports = {
         'dist/**/*.(html|js|css|png)'
     ],
     server: {
-        baseDir: 'dist',
+        baseDir: './',
         directory: true,
         index: 'index.html'
     },
