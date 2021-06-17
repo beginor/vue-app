@@ -1,5 +1,5 @@
 #!/bin/bash -e
-rm -rf dist/libs && mkdir dist/libs
+rm -rf dist/libs && mkdir -p dist/libs
 # tslib
 mkdir dist/libs/tslib
 cp -v node_modules/tslib/tslib.es6.js dist/libs/tslib/tslib.js
