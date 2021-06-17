@@ -1,1 +1,1 @@
-# Rollup starter project with TypeScript!
+# Vue demo app with rollup
