@@ -1,15 +1,16 @@
-export class App {
+<template>
+  <h1> {{title}} </h1>
+</template>
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-    /** app title */
-    public title = 'Hello, Rollup !';
-
-    constructor(private container: HTMLElement) { }
-
-    /**
-     * run the app.
-     */
-    public run(): void {
-        this.container.innerHTML = `<h1>${this.title}</h1>`;
-    }
-
-}
+export default defineComponent({
+    data() {
+        return {
+            title: 'Hello, Vue !'
+        }
+    },
+    setup() { },
+    mounted() { }
+})
+</script>
