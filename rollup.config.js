@@ -9,6 +9,7 @@ import { terser } from 'rollup-plugin-terser';
 // `npm run dev` -> `production` is false
 const production = !process.env.ROLLUP_WATCH;
 
+/** @type { import('rollup').RollupOptions } */
 export default {
   input: ['./src/main.ts'],
   output: {
@@ -17,8 +18,9 @@ export default {
     format: 'es',
     sourcemap: !production
   },
+  watch: { buildDelay: 500 },
   treeshake: production,
-  external: [],
+  external: ['tslib', 'bootstrap', '@popperjs/core'],
   plugins: [
     typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
     css({ output: 'main.css' }),

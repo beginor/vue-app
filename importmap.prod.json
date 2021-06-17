@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "tslib": "./dist/libs/tslib/tslib.min.js",
+    "bootstrap": "./dist/libs/bootstrap/js/bootstrap.esm.min.js",
+    "@popperjs/core": "./dist/libs/@popperjs/core.min.js"
+  }
+}
