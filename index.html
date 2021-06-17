@@ -9,6 +9,11 @@
 </head>
 <body>
   <div id="app"></div>
-  <script type="module" src="./dist/main.js"></script>
+  <script src="./index.js"></script>
+  <script>
+  loadScripts([
+    { type: 'module', src: './dist/main.js' }
+  ]).catch(ex => console.error(ex));
+  </script>
 </body>
 </html>
