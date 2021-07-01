@@ -10,30 +10,32 @@ import { terser } from 'rollup-plugin-terser';
 const production = !process.env.ROLLUP_WATCH;
 
 /** @type { import('rollup').RollupOptions } */
-export default {
-  input: ['./src/main.ts'],
-  output: {
-    dir: 'dist',
-    chunkFileNames: production ? "chunks/[name]-[hash].js" : "chunks/[name].js",
-    format: 'es',
-    sourcemap: !production
-  },
-  watch: { buildDelay: 500 },
-  treeshake: production,
-  external: [
-    'tslib', 'bootstrap', '@popperjs/core'
-  ],
-  plugins: [
-    typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
-    css({ output: 'main.css' }),
-    alias({}),
-    nodeResolve({ mainFields: ['module', 'main'] }),
-    commonjs({
-      include: []
-    }),
-    production && terser({
-      format: { comments: false }
-    })
-  ],
-  preserveEntrySignatures: false
-}
+export default [
+  {
+    input: ['./src/main.ts'],
+    output: {
+      dir: 'dist',
+      chunkFileNames: production ? "chunks/[name]-[hash].js" : "chunks/[name].js",
+      format: 'es',
+      sourcemap: !production
+    },
+    watch: { buildDelay: 500 },
+    treeshake: production,
+    external: [
+      'tslib', 'bootstrap', '@popperjs/core'
+    ],
+    plugins: [
+      typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
+      css({ output: 'main.css' }),
+      alias({}),
+      nodeResolve({ mainFields: ['module', 'main'] }),
+      commonjs({
+        include: []
+      }),
+      production && terser({
+        format: { comments: false }
+      })
+    ],
+    preserveEntrySignatures: false
+  }
+]
