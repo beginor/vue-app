@@ -34,11 +34,11 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@types/bootstrap": "^5.0.16",
-    "eslint": "^7.29.0",
-    "@typescript-eslint/parser": "^4.28.1",
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
-    "rollup": "^2.52.4",
+    "@types/bootstrap": "^5.0.17",
+    "eslint": "^7.30.0",
+    "@typescript-eslint/parser": "^4.28.3",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "rollup": "^2.53.1",
     "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
