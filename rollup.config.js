@@ -2,7 +2,7 @@ import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
-import css from 'rollup-plugin-css-only';
+import scss from 'rollup-plugin-scss';
 import { terser } from 'rollup-plugin-terser';
 
 // `npm run build` -> `production` is true
@@ -26,7 +26,7 @@ export default [
     ],
     plugins: [
       typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
-      css({ output: 'main.css' }),
+      scss({ output: 'dist/main.css', sass: require('sass'), sourceMap: !production }),
       alias({}),
       nodeResolve({ mainFields: ['module', 'main'] }),
       commonjs({

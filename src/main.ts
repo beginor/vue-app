@@ -1,4 +1,4 @@
-import './main.css';
+import './main.scss';
 
 import('./app/app').then(m => {
     const elementId = 'app';

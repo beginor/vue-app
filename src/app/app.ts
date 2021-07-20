@@ -1,3 +1,5 @@
+import './app.scss';
+
 export class App {
 
     /** app title */
@@ -10,6 +12,7 @@ export class App {
      */
     public run(): void {
         this.container.innerHTML = `<h1>${this.title}</h1>`;
+        this.container.className = 'app-header';
     }
 
 }
