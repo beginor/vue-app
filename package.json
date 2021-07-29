@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "build": "npm run clean && npm run rollup && npm run copy-libs",
+    "build-app": "rm -rf dist/main.* dist/chunks && npm run rollup",
     "clean": "rm -rf dist && mkdir dist",
     "copy-libs": "./copy-libs.sh",
     "browser-sync": "browser-sync start --config bs-config.js",
