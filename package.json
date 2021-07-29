@@ -34,8 +34,8 @@
     "bootstrap": "^5.0.2",
     "bootstrap-icons": "^1.5.0",
     "tslib": "^2.3.0",
-    "vue": "^3.1.1",
-    "vue-router": "^4.0.9"
+    "vue": "^3.1.5",
+    "vue-router": "^4.0.10"
   },
   "devDependencies": {
     "@types/bootstrap": "^5.0.17",
@@ -52,7 +52,7 @@
     "sass": "^1.36.0",
     "typescript": "^4.3.5",
     "rollup-plugin-vue": "^6.0.0",
-    "@vue/compiler-sfc": "^3.1.1",
-    "eslint-plugin-vue": "^7.11.1"
+    "@vue/compiler-sfc": "^3.1.5",
+    "eslint-plugin-vue": "^7.14.0"
   }
 }

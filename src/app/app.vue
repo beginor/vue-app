@@ -39,6 +39,6 @@ export default defineComponent({
     background-color: #ccc;
 }
 h1 {
-    background-color: blue;
+    background-color: var(--bs-primary);
 }
 </style>
