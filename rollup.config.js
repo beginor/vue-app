@@ -26,7 +26,10 @@ export default [
     ],
     plugins: [
       typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
-      scss({ output: 'dist/main.css', sass: require('sass'), sourceMap: !production }),
+      scss({
+        output: 'dist/main.css', sass: require('sass'), sourceMap: !production,
+        outputStyle: !production ? 'expanded' : 'compressed'
+      }),
       alias({}),
       nodeResolve({ mainFields: ['module', 'main'] }),
       commonjs({
