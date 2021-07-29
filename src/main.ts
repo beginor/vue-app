@@ -9,7 +9,7 @@ import('./app/app.vue').then(m => {
         throw new Error(`Element with id ${elementId} doesn't exists !`)
     }
 
-    const vm = createApp(m.default);
+    const vm = createApp(m.default, { msg: 'hello'});
     vm.mount(container);
 
 }).catch(ex => {
