@@ -1,0 +1,12 @@
+@import './variables';
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+html, body {
+  @include full-width-height();
+  @include no-margin-padding();
+  overflow: hidden;
+}
+#app {
+  background-color: $body-bg;
+}

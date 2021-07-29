@@ -1,17 +1,13 @@
-import { createApp } from 'vue';
+import './main.scss';
 
-import './main.css';
-
-import('./app/app.vue').then(m => {
+import('./app/app').then(m => {
     const elementId = 'app';
     const container = document.getElementById(elementId);
     if (!container) {
         throw new Error(`Element with id ${elementId} doesn't exists !`)
     }
-
-    const vm = createApp(m.default, { msg: 'hello'});
-    vm.mount(container);
-
+    const app = new m.App(container);
+    app.run();
 }).catch(ex => {
     console.error(ex);
 });
