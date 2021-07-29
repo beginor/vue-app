@@ -19,7 +19,7 @@ export default [
       format: 'es',
       sourcemap: !production
     },
-    watch: { buildDelay: 500 },
+    watch: { buildDelay: 0 },
     treeshake: production,
     external: [
       'tslib', 'bootstrap', '@popperjs/core'
