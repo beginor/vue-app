@@ -11,7 +11,8 @@
     "browser-sync": "browser-sync start --config bs-config.js",
     "rollup": "rollup -c rollup.config.js",
     "rollup-watch": "npm run rollup -- --watch",
-    "start": "npm run clean && npm run copy-libs && concurrently 'npm run browser-sync' 'npm run rollup-watch'",
+    "dev": "concurrently 'npm run browser-sync' 'npm run rollup-watch'",
+    "start": "npm run clean && npm run copy-libs && npm run dev",
     "test": "echo test"
   },
   "repository": {
