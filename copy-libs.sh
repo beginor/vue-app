@@ -7,6 +7,9 @@ npx rollup -c rollup/rollup.tslib.js
 # bootstrap-icons
 cp -rv node_modules/bootstrap-icons/icons dist/libs/bootstrap-icons
 # bootstrap
-cp -rv node_modules/bootstrap/dist dist/libs/bootstrap
+mkdir dist/libs/bootstrap
+cp -v node_modules/bootstrap/dist/css/bootstrap.min.css dist/libs/bootstrap
+cp -v node_modules/bootstrap/dist/js/bootstrap.esm.js dist/libs/bootstrap
+cp -v node_modules/bootstrap/dist/js/bootstrap.esm.min.js dist/libs/bootstrap
 # @popperjs/core
 npx rollup -c rollup/rollup.popperjs.js
