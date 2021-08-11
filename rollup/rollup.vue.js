@@ -1,6 +1,5 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import { terser } from "rollup-plugin-terser";
-import replace from "@rollup/plugin-replace";
 
 /** @type { import('rollup').RollupOptions } */
 export default [
@@ -15,12 +14,6 @@ export default [
     external: ["vue"],
     plugins: [
       nodeResolve(),
-      replace({
-        preventAssignment: false,
-        values: {
-          "process.env.NODE_ENV": '"production"'
-        }
-      }),
       terser({ format: { comments: false }})
     ]
   },
@@ -34,13 +27,7 @@ export default [
     },
     external: ["vue"],
     plugins: [
-      nodeResolve(),
-      replace({
-        preventAssignment: false,
-        values: {
-          "process.env.NODE_ENV": '"development"'
-        }
-      })
+      nodeResolve()
     ]
   }
 ]
