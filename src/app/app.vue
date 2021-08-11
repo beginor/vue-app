@@ -4,6 +4,11 @@
   </h1>
   <p>{{ message }}</p>
   <p>{{ msg }}</p>
+  <p>
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About</router-link>
+  </p>
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
