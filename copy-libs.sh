@@ -17,4 +17,4 @@ npx rollup -c rollup/rollup.popperjs.js
 mkdir dist/libs/vue
 cp -v node_modules/vue/dist/vue.esm-browser.js dist/libs/vue/vue.js
 cp -v node_modules/vue/dist/vue.esm-browser.prod.js dist/libs/vue/vue.min.js
-cp -v node_modules/vue-router/dist/vue-router.esm-browser.js dist/libs/vue/vue-router.js
+npx rollup -c rollup/rollup.vue-router.js
