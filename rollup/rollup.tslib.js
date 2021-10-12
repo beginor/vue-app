@@ -1,4 +1,4 @@
-import { terser } from "rollup-plugin-terser";
+import esbuild from 'rollup-plugin-esbuild';
 
 /** @type { import('rollup').RollupOptions } */
 export default {
@@ -11,6 +11,6 @@ export default {
   },
   external: [],
   plugins: [
-    terser({ format: { comments: false }})
+    esbuild({ minify: true, legalComments: 'none' })
   ]
 }

@@ -1,9 +1,8 @@
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import typescript from '@rollup/plugin-typescript';
 import scss from 'rollup-plugin-scss';
-import { terser } from 'rollup-plugin-terser';
+import esbuild from 'rollup-plugin-esbuild';
 import vue from 'rollup-plugin-vue';
 
 // `npm run build` -> `production` is true
@@ -28,19 +27,14 @@ export default [
     ],
     plugins: [
       vue({}),
-      typescript({ tsconfig: 'tsconfig.json', sourceMap: !production }),
+      esbuild({ tsconfig: 'tsconfig.json', sourceMap: !production, minify: !!production }),
       scss({
         output: 'dist/main.css', sass: require('sass'), sourceMap: !production,
         outputStyle: !production ? 'expanded' : 'compressed'
       }),
       alias({}),
-      nodeResolve({ mainFields: ['module', 'main'] }),
-      commonjs({
-        include: []
-      }),
-      production && terser({
-        format: { comments: false }
-      })
+      nodeResolve({}),
+      commonjs({})
     ],
     preserveEntrySignatures: false
   }
