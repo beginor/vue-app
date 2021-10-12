@@ -1,5 +1,5 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
-import { terser } from "rollup-plugin-terser";
+import esbuild from 'rollup-plugin-esbuild';
 
 /** @type { import('rollup').RollupOptions } */
 export default [
@@ -14,7 +14,7 @@ export default [
     external: ["vue"],
     plugins: [
       nodeResolve(),
-      terser({ format: { comments: false }})
+      esbuild({ minify: true, legalComments: 'none' })
     ]
   },
   {
