@@ -19,7 +19,7 @@ export default [
       format: 'es',
       sourcemap: !production
     },
-    watch: { buildDelay: 0 },
+    watch: { clearScreen: false },
     treeshake: production,
     external: [
       'tslib', 'bootstrap', '@popperjs/core',
@@ -27,7 +27,7 @@ export default [
     ],
     plugins: [
       vue({}),
-      esbuild({ tsconfig: 'tsconfig.json', sourceMap: !production, minify: !!production }),
+      esbuild({ tsconfig: 'tsconfig.json', sourceMap: !production, minify: production }),
       scss({
         output: 'dist/main.css', sass: require('sass'), sourceMap: !production,
         outputStyle: !production ? 'expanded' : 'compressed'
