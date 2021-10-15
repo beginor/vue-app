@@ -10,32 +10,32 @@ import vue from 'rollup-plugin-vue';
 const production = !process.env.ROLLUP_WATCH;
 
 /** @type { import('rollup').RollupOptions } */
-export default [
-  {
-    input: ['./src/main.ts'],
-    output: {
-      dir: 'dist',
-      chunkFileNames: production ? "chunks/[name]-[hash].js" : "chunks/[name].js",
-      format: 'es',
-      sourcemap: !production
-    },
-    watch: { clearScreen: false },
-    treeshake: production,
-    external: [
-      'tslib', 'bootstrap', '@popperjs/core',
-      'vue', 'vue-router'
-    ],
-    plugins: [
-      vue({}),
-      esbuild({ tsconfig: 'tsconfig.json', sourceMap: !production, minify: production }),
-      scss({
-        output: 'dist/main.css', sass: require('sass'), sourceMap: !production,
-        outputStyle: !production ? 'expanded' : 'compressed'
-      }),
-      alias({}),
-      nodeResolve({}),
-      commonjs({})
-    ],
-    preserveEntrySignatures: false
-  }
-]
+export default {
+  input: [
+    './src/main.ts'
+  ],
+  output: {
+    dir: 'dist',
+    chunkFileNames: production ? "chunks/[name]-[hash].js" : "chunks/[name].js",
+    format: 'es',
+    sourcemap: !production
+  },
+  watch: { clearScreen: false },
+  treeshake: production,
+  external: [
+    'tslib', 'bootstrap', '@popperjs/core',
+    'vue', 'vue-router'
+  ],
+  plugins: [
+    vue({}),
+    esbuild({ tsconfig: 'tsconfig.json', sourceMap: !production, minify: production, legalComments: 'none' }),
+    scss({
+      output: 'dist/main.css', sass: require('sass'), sourceMap: !production,
+      outputStyle: !production ? 'expanded' : 'compressed'
+    }),
+    alias({}),
+    nodeResolve({}),
+    commonjs({})
+  ],
+  preserveEntrySignatures: false
+}
