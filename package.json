@@ -45,6 +45,8 @@
     "@rollup/plugin-alias": "^3.1.5",
     "@rollup/plugin-commonjs": "^21.0.0",
     "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-replace": "^3.0.0",
+    "@rollup/plugin-typescript": "^8.2.5",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-esbuild": "^4.5.0",
     "sass": "^1.42.1",
