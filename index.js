@@ -1,20 +1,20 @@
 function isProd() {
-  const arr = location.search.substring(1).split('&');
-    const q = { };
-    for (const item of arr) {
-        const itemArr = item.split('=');
-        q[itemArr[0]] = itemArr[1];
-    }
-  var mode = q['mode'];
+  var mode = getQueryString('mode');
   if (!!mode) {
-    if (mode === 'prod') {
-      return true;
-    }
-    if (mode === 'dev') {
-      return false;
-    }
+    if (mode === 'prod') { return true; }
+    if (mode === 'dev') { return false; }
   }
   return ['127.0.0.1', 'localhost'].indexOf(location.hostname) === -1;
+}
+
+function getQueryString(key) {
+  const arr = location.search.substring(1).split('&');
+  const query = { };
+  for (const item of arr) {
+    const itemArr = item.split('=');
+    query[itemArr[0]] = itemArr[1];
+  }
+  return query[key];
 }
 
 async function loadScripts(scripts) {
