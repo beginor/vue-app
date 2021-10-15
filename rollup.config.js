@@ -9,30 +9,28 @@ import esbuild from 'rollup-plugin-esbuild';
 const production = !process.env.ROLLUP_WATCH;
 
 /** @type { import('rollup').RollupOptions } */
-export default [
-  {
-    input: ['./src/main.ts'],
-    output: {
-      dir: 'dist',
-      chunkFileNames: production ? "chunks/[name]-[hash].js" : "chunks/[name].js",
-      format: 'es',
-      sourcemap: !production
-    },
-    watch: { clearScreen: false },
-    treeshake: production,
-    external: [
-      'tslib', 'bootstrap', '@popperjs/core'
-    ],
-    plugins: [
-      esbuild({ tsconfig: 'tsconfig.json', sourceMap: !production, minify: production }),
-      scss({
-        output: 'dist/main.css', sass: require('sass'), sourceMap: !production,
-        outputStyle: !production ? 'expanded' : 'compressed'
-      }),
-      alias({}),
-      nodeResolve({}),
-      commonjs({})
-    ],
-    preserveEntrySignatures: false
-  }
-]
+export default {
+  input: ['./src/main.ts'],
+  output: {
+    dir: 'dist',
+    chunkFileNames: production ? "chunks/[name]-[hash].js" : "chunks/[name].js",
+    format: 'es',
+    sourcemap: !production
+  },
+  watch: { clearScreen: false },
+  treeshake: production,
+  external: [
+    'tslib', 'bootstrap', '@popperjs/core'
+  ],
+  plugins: [
+    esbuild({ tsconfig: 'tsconfig.json', sourceMap: !production, minify: production }),
+    scss({
+      output: 'dist/main.css', sass: require('sass'), sourceMap: !production,
+      outputStyle: !production ? 'expanded' : 'compressed'
+    }),
+    alias({}),
+    nodeResolve({}),
+    commonjs({})
+  ],
+  preserveEntrySignatures: false
+}
