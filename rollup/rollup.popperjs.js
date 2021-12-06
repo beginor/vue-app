@@ -12,7 +12,7 @@ export default [
     },
     external: [],
     plugins: [
-      esbuild({ minify: true, legalComments: 'external' })
+      esbuild({ minify: true, legalComments: 'none' })
     ]
   },
   {
