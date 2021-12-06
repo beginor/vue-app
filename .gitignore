@@ -3,3 +3,4 @@ dist
 .rpt2_cache
 package-lock.json
 .DS_Store
+pnpm-lock.yaml
