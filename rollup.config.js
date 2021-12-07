@@ -4,8 +4,8 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import scss from 'rollup-plugin-scss';
 import esbuild from 'rollup-plugin-esbuild';
 
-// `npm run build` -> `production` is true
-// `npm run dev` -> `production` is false
+// `pnpm run build` -> `production` is true
+// `pnpm run dev` -> `production` is false
 const production = !process.env.ROLLUP_WATCH;
 
 /** @type { import('rollup').RollupOptions } */
