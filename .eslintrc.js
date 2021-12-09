@@ -1,4 +1,5 @@
-{
+/** @type { import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config } */
+module.exports = {
   "$schema": "https://json.schemastore.org/eslintrc",
   "root": true,
   "env": {
@@ -21,7 +22,9 @@
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "sourceType": "module",
-        "project": "./tsconfig.json"
+        "project": "./tsconfig.json",
+        "createDefaultProgram": true,
+        "tsconfigRootDir": __dirname
       },
       "rules": {
         "quotes": ["warn", "single"],
