@@ -11,7 +11,7 @@ let handle = 0;
 onMounted(() => {
     handle = setInterval(() => {
         time.value = new Date();
-        console.log(time);
+        // console.log(time.value);
     }, 1000);
 });
 
