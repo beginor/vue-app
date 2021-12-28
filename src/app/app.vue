@@ -1,53 +1,31 @@
 <template>
-  <h1 class="bg-body text-body">
-    {{ title }}
-  </h1>
-  <p>{{ message }}</p>
-  <p>{{ msg }}</p>
-  <p>
-    <router-link to="/">
-      Home
-    </router-link>
-    <router-link to="/about">
-      About
-    </router-link>
-  </p>
-  <router-view />
+  <nav-bar />
+  <div class="app-main">
+    <router-view />
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<style scoped lang="scss">
+@import './src/variables';
 
-export default defineComponent({
-    name: 'RootComponent',
-    props: {
-        msg: { type: String, required: false, default: '' }
-    },
-    data() {
-        return {
-            title: 'Hello, Vue !'
-        }
-    },
-    methods: {
-        init: function() {
-            //
-        }
-    },
-    setup(props) {
-        return {
-            message: props.msg
-        };
-    },
-    mounted() {
-        this.init();
-    }
-})
-</script>
-<style scoped>
-:host {
-    background-color: #ccc;
-}
-h1 {
-    background-color: var(--bs-primary);
+.app-main {
+  @include full-width-height();
+  @include no-margin-padding();
+  overflow: hidden;
 }
 </style>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
+import NavBar from './controls/nav-bar.vue';
+
+const props = defineProps({
+    msg: { type: String, required: false, default: '' },
+});
+
+const title = ref('Hello, Vue !');
+let message;
+
+onMounted(() => { message = props.msg });
+</script>
