@@ -8,13 +8,8 @@ function isProd() {
 }
 
 function getQueryString(key) {
-  const arr = location.search.substring(1).split('&');
-  const query = { };
-  for (const item of arr) {
-    const itemArr = item.split('=');
-    query[itemArr[0]] = itemArr[1];
-  }
-  return query[key];
+  const query = new URLSearchParams(location.search);
+  return query.get(key);
 }
 
 async function loadScripts(scripts) {

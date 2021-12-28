@@ -2,11 +2,68 @@
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 
-html, body {
+html {
   @include full-width-height();
   @include no-margin-padding();
   overflow: hidden;
 }
-#app {
-  background-color: $body-bg;
+
+body {
+  @extend html;
+
+  #app {
+    display: block;
+    @include full-width-height();
+    @include no-margin-padding();
+
+    .loading-indicator {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      width: 200px;
+      height: 48px;
+      margin-left: -100px;
+      margin-top: -50px;
+      text-align: center;
+      line-height: 48px;
+    }
+  }
 }
+
+/* Styles for BootStrap Icons */
+.bi {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1rem;
+  height: 1rem;
+}
+
+.bi-xs { width: .75rem; height: .75rem; }
+
+.bi-sm { width: .875rem; height: .875rem; }
+
+.bi-lg { width: 1.25rem; height: 1.25rem; }
+
+.bi-xl { width: 1.33333rem; height: 1.33333rem; }
+
+.bi-xxl { width: 1.5rem; height: 1.5rem; }
+
+@for $i from 1 through 10 {
+  .bi-#{$i}x {
+    width: $i * 1rem; height: $i * 1rem;
+  }
+}
+
+.bi-spin {
+  animation: bi-spin 2s linear infinite
+}
+
+@keyframes bi-spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(1turn)
+  }
+}
+

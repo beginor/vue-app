@@ -4,7 +4,7 @@
 
 $enable-shadows: true;
 $enable-rounded: true;
-$enable-caret: true;
+$enable-caret: false;
 
 @mixin full-width-height() {
   width: 100%;
