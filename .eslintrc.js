@@ -74,7 +74,11 @@ module.exports = {
       "files": ["*.vue"],
       "extends": [
         "plugin:vue/vue3-strongly-recommended"
-      ]
+      ],
+      "rules": {
+        "vue/first-attribute-linebreak": ["off"],
+        "vue/max-attributes-per-line": ["off"]
+      }
     }
   ]
 }
