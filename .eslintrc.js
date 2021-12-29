@@ -77,7 +77,9 @@ module.exports = {
       ],
       "rules": {
         "vue/first-attribute-linebreak": ["off"],
-        "vue/max-attributes-per-line": ["off"]
+        "vue/max-attributes-per-line": ["off"],
+        "vue/html-closing-bracket-newline": ["off"],
+        "vue/html-self-closing": ["off"]
       }
     }
   ]
