@@ -1,20 +1,3 @@
-<template>
-  <nav-bar />
-  <div class="app-main">
-    <router-view />
-  </div>
-</template>
-
-<style scoped lang="scss">
-@import './src/variables';
-
-.app-main {
-  @include full-width-height();
-  @include no-margin-padding();
-  overflow: hidden;
-}
-</style>
-
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
@@ -29,3 +12,20 @@ let message;
 
 onMounted(() => { message = props.msg });
 </script>
+
+<template>
+  <NavBar />
+  <div class="app-main">
+    <router-view />
+  </div>
+</template>
+
+<style scoped lang="scss">
+@import './src/variables';
+
+.app-main {
+  @include full-width-height();
+  @include no-margin-padding();
+  overflow: hidden;
+}
+</style>
