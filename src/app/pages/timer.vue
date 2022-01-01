@@ -20,7 +20,8 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="about-page">
+  <div class="route-page">
+    <h2>Timer</h2>
     <p>{{ time }}</p>
     <button type="button" @click="count++">
       Click Me.

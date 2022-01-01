@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
         <img class="d-inline-block align-text-bottom me-1" src="vue.svg"
@@ -21,6 +21,9 @@
           </router-link>
           <router-link class="nav-link" active-class="active" to="/timer">
             Timer
+          </router-link>
+          <router-link class="nav-link" active-class="active" to="/layout">
+            Layout
           </router-link>
         </div>
       </div>

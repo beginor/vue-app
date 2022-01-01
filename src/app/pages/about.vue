@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <h2>About</h2>
+  <div class="route-page">
+    <h2>About</h2>
+  </div>
 </template>
