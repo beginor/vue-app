@@ -20,7 +20,12 @@
   <script src="http://81.71.93.249/dist/loader.js"></script>
   <script>
   loadScripts([
-    { type: 'importmap', src: [`http://81.71.93.249/dist/importmap.${isProd()?'prod.json':'json'}`, './importmap.json'] },
+    { type: 'importmap',
+      src: [
+        `http://81.71.93.249/dist/importmap.${isProd()?'prod.json':'json'}`,
+        `./importmap.${isProd()?'prod.json':'json'}`
+      ]
+    },
     { type: 'module', src: './dist/main.js' }
   ]).catch(ex => console.error(ex));
   </script>
