@@ -40,11 +40,11 @@ function loadScript({ src, type }) {
 
 async function loadImportmap(url) {
   if (Array.isArray(url)) {
-    const importMap = {};
+    const importMap = { imports: {} };
     for (const u of url) {
       const res = await fetch(u);
       const json = await res.json();
-      Object.assign(importMap, json);
+      Object.assign(importMap.imports, json.imports);
     }
     createImportMapElement(importMap)
   }

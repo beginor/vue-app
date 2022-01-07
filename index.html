@@ -17,10 +17,10 @@
       Loading ...
     </div>
   </div>
-  <script src="./index.js"></script>
+  <script src="http://81.71.93.249/dist/loader.js"></script>
   <script>
   loadScripts([
-    { type: 'importmap', src: `./importmap.${isProd()?'prod.json':'json'}` },
+    { type: 'importmap', src: [`http://81.71.93.249/dist/importmap.${isProd()?'prod.json':'json'}`, './importmap.json'] },
     { type: 'module', src: './dist/main.js' }
   ]).catch(ex => console.error(ex));
   </script>
