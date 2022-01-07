@@ -1,5 +1,5 @@
 function isProd() {
-  var mode = getQueryString('mode');
+  const mode = getQueryString('mode');
   if (!!mode) {
     if (mode === 'prod') { return true; }
     if (mode === 'dev') { return false; }
@@ -39,10 +39,25 @@ function loadScript({ src, type }) {
 }
 
 async function loadImportmap(url) {
-  var res = await fetch(url);
-  var text = await res.text();
-  var el = document.createElement('script');
+  if (Array.isArray(url)) {
+    const importMap = {};
+    for (const u of url) {
+      const res = await fetch(u);
+      const json = await res.json();
+      Object.assign(importMap, json);
+    }
+    createImportMapElement(importMap)
+  }
+  else {
+    const res = await fetch(url);
+    const importMap = await res.json();
+    createImportMapElement(importMap);
+  }
+}
+
+function createImportMapElement(importMap) {
+  const el = document.createElement('script');
   el.type = 'importmap';
-  el.textContent = text;
+  el.textContent = JSON.stringify(importMap);
   document.body.appendChild(el);
 }
