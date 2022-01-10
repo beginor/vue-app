@@ -4,16 +4,15 @@
   "description": "rollup starter kit",
   "main": "index.html",
   "scripts": {
-    "build": "pnpm run clean && pnpm run rollup && pnpm run copy-libs",
+    "build": "pnpm run clean && pnpm run rollup",
     "build-app": "pnpm run clean-app && pnpm run rollup",
     "clean": "rm -rf dist && mkdir dist",
     "clean-app": "rm -rf dist/main.* dist/chunks",
-    "copy-libs": "./copy-libs.sh",
     "browser-sync": "browser-sync start --config bs-config.js",
     "rollup": "rollup -c rollup.config.js",
     "rollup-watch": "pnpm run rollup -- --watch",
     "dev": "pnpm run clean-app && concurrently 'pnpm run browser-sync' 'pnpm run rollup-watch'",
-    "start": "pnpm run clean && pnpm run copy-libs && pnpm run dev",
+    "start": "pnpm run clean && pnpm run dev",
     "test": "echo test"
   },
   "repository": {
