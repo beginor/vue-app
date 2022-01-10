@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-import NavBar from './controls/nav-bar.vue';
+import { NavBar } from './controls';
 
 const props = defineProps({
     msg: { type: String, required: false, default: '' },
