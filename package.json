@@ -35,7 +35,7 @@
     "@types/bootstrap": "^5.1.8",
     "bootstrap-icons": "^1.7.2",
     "tslib": "^2.3.1",
-    "vue": "^3.2.26",
+    "vue": "^3.2.27",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
@@ -54,7 +54,7 @@
     "typescript": "^4.5.4",
     "esbuild": "^0.14.11",
     "rollup-plugin-vue": "^6.0.0",
-    "@vue/compiler-sfc": "^3.2.26",
-    "eslint-plugin-vue": "^8.2.0"
+    "@vue/compiler-sfc": "^3.2.27",
+    "eslint-plugin-vue": "^8.3.0"
   }
 }
