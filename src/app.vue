@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-import { NavBar } from './controls';
-
 const props = defineProps({
     msg: { type: String, required: false, default: '' },
 });
@@ -14,9 +12,9 @@ onMounted(() => { message = props.msg });
 </script>
 
 <template>
-  <NavBar />
   <div class="app-main">
-    <router-view />
+    <h2>{{ title }}</h2>
+    <p>{{ msg }}</p>
   </div>
 </template>
 
