@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
-
+import antDv from 'ant-design-vue';
 
 import App from './app.vue';
 import { routes } from './app-routes';
@@ -14,6 +14,7 @@ if (!container) {
 }
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 const app = createApp(App, { msg: 'Hello, Vue!' });
+app.use(antDv);
 const router = createRouter({
     history: createWebHashHistory(),
     routes

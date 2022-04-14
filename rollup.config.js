@@ -1,6 +1,7 @@
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 import scss from 'rollup-plugin-scss';
 import esbuild from 'rollup-plugin-esbuild';
 import vue from 'rollup-plugin-vue';
@@ -24,7 +25,7 @@ export default {
   treeshake: production,
   external: [
     'tslib', 'bootstrap', '@popperjs/core',
-    'vue', 'vue-router'
+    'vue', 'vue-router', 'ant-design-vue'
   ],
   plugins: [
     vue({}),
@@ -35,7 +36,13 @@ export default {
     }),
     alias({}),
     nodeResolve({}),
-    commonjs({})
+    commonjs({}),
+    replace({
+      preventAssignment: false,
+      values: {
+        'process.env.NODE_ENV': production ? '"development"' : '"production"'
+      }
+    })
   ],
   preserveEntrySignatures: false
 }
