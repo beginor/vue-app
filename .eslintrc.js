@@ -73,6 +73,8 @@ module.exports = {
     {
       "files": ["*.vue"],
       "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:vue/vue3-strongly-recommended"
       ],
       "rules": {
