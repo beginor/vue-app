@@ -73,10 +73,16 @@ module.exports = {
     {
       "files": ["*.vue"],
       "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:vue/vue3-strongly-recommended"
+        "@vue/typescript/recommended",
+        "plugin:vue/vue3-essential",
+        "plugin:vue/vue3-strongly-recommended",
       ],
+      "parserOptions": {
+        "sourceType": "module",
+        "project": "./tsconfig.json",
+        "createDefaultProgram": true,
+        "tsconfigRootDir": __dirname
+      },
       "rules": {
         "vue/first-attribute-linebreak": ["off"],
         "vue/max-attributes-per-line": ["off"],
