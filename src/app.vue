@@ -6,7 +6,7 @@ const props = defineProps({
     msg: { type: String, required: false, default: '' },
 });
 
-const title = ref('Hello, Vue !');
+const title = ref<string>('Hello, Vue !');
 let message;
 
 onMounted(() => { message = props.msg });
