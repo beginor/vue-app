@@ -36,3 +36,9 @@ module.exports.ts = {
 };
 
 
+module.exports.vue = Object.assign({}, module.exports.ts, {
+  'vue/first-attribute-linebreak': ['off'],
+  'vue/max-attributes-per-line': ['off'],
+  'vue/html-closing-bracket-newline': ['off'],
+  'vue/html-self-closing': ['off']
+});

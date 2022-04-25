@@ -50,12 +50,7 @@ module.exports = {
         "createDefaultProgram": true,
         "tsconfigRootDir": __dirname
       },
-      "rules": {
-        "vue/first-attribute-linebreak": ["off"],
-        "vue/max-attributes-per-line": ["off"],
-        "vue/html-closing-bracket-newline": ["off"],
-        "vue/html-self-closing": ["off"]
-      }
+      "rules": rules.vue
     }
   ]
 }
