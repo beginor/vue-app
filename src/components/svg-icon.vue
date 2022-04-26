@@ -5,7 +5,7 @@ const props = defineProps({
     path: { type: String, required: true, default: 'bi/app' }
 });
 
-const iconRef = ref();
+const iconRef = ref<HTMLElement>();
 
 onMounted(() => {
     console.log(iconRef.value, 'onMounted');
