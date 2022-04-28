@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 
 const props = defineProps({
-  msg: { type: String, required: false, default: '' },
+    msg: { type: String, required: false, default: '' },
 });
 
 const title = ref<string>('Hello, Vue !');
