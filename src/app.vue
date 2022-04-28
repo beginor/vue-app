@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 
 const props = defineProps({
-    msg: { type: String, required: false, default: '' },
+  msg: { type: String, required: false, default: '' },
 });
 
 const title = ref<string>('Hello, Vue !');
@@ -12,10 +12,11 @@ onMounted(() => { message = props.msg });
 </script>
 
 <template>
-  <div class="app-main">
-    <h2>{{ title }}</h2>
-    <p>{{ msg }}</p>
-  </div>
+    <div class="app-main">
+        <h2>{{ title }}</h2>
+        <p>{{ msg }}</p>
+        <p>{{ message }}</p>
+    </div>
 </template>
 
 <style scoped lang="scss">
