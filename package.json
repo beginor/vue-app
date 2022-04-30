@@ -36,7 +36,7 @@
     "bootstrap-icons": "^1.8.1",
     "tslib": "^2.4.0",
     "vue": "^3.2.33",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "eslint": "^8.14.0",
