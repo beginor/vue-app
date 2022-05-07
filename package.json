@@ -10,7 +10,7 @@
     "clean-app": "rm -rf dist/main.* dist/chunks",
     "browser-sync": "browser-sync start --config bs-config.js",
     "rollup": "rollup -c rollup.config.js",
-    "rollup-watch": "pnpm run rollup -- --watch",
+    "rollup-watch": "pnpm run rollup --watch",
     "dev": "pnpm run clean-app && concurrently 'pnpm run browser-sync' 'pnpm run rollup-watch'",
     "start": "pnpm run clean && pnpm run dev",
     "test": "echo test"
