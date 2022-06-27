@@ -19,7 +19,7 @@ onMounted(() => { message = props.msg });
     </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import './src/variables';
 
 .app-main {
