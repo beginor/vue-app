@@ -37,7 +37,7 @@
     "tslib": "^2.4.0",
     "vue": "^3.2.37",
     "vue-router": "^4.0.16",
-    "ant-design-vue": "^3.2.6"
+    "ant-design-vue": "^3.2.9"
   },
   "devDependencies": {
     "eslint": "^8.18.0",
