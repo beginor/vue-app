@@ -19,7 +19,7 @@ onMounted(() => { message = props.msg });
     </div>
 </template>
 
-<style scoped lang="css">
+<style lang="css">
 
 .app-main {
   width: 100%;
