@@ -1,0 +1,32 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#app {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app .loading-indicator {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 48px;
+  margin-left: -100px;
+  margin-top: -50px;
+  text-align: center;
+  line-height: 48px;
+}
+
+:root {
+  --bs-body-bg: var(--bs-dark);
+  --bs-body-color: var(--bs-light);
+}
