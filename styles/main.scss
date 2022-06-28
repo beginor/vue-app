@@ -2,34 +2,6 @@
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 
-html {
-  @include full-width-height();
-  @include no-margin-padding();
-  overflow: hidden;
-}
-
-body {
-  @extend html;
-
-  #app {
-    display: block;
-    @include full-width-height();
-    @include no-margin-padding();
-
-    .loading-indicator {
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      width: 200px;
-      height: 48px;
-      margin-left: -100px;
-      margin-top: -50px;
-      text-align: center;
-      line-height: 48px;
-    }
-  }
-}
-
 /* Styles for BootStrap Icons */
 .bi {
   display: inline-block;
