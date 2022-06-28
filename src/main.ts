@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 
 import App from './app.vue';
 
-import './main.scss';
+import './main.css';
 
 const elementId = 'app';
 const container = document.getElementById(elementId);
