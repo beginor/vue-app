@@ -25,8 +25,3 @@ html, body {
   text-align: center;
   line-height: 48px;
 }
-
-:root {
-  --bs-body-bg: var(--bs-dark);
-  --bs-body-color: var(--bs-light);
-}
