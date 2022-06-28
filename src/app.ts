@@ -1,4 +1,4 @@
-import './app.scss';
+import './app.css';
 
 export class App {
 
@@ -11,7 +11,7 @@ export class App {
      * run the app.
      */
     public run(): void {
-        this.container.innerHTML = `<h1>${this.title}</h1>`;
+        this.container.innerHTML = `<h1>${this.title}</h1> hello, world!`;
         this.container.className = 'app-header';
     }
 
