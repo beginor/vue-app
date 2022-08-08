@@ -35,12 +35,12 @@ onMounted(() => { message = props.msg });
   </div> -->
 </template>
 
-<style lang="scss">
-@import './src/variables';
-
+<style lang="css">
 .app-main {
-  @include full-width-height();
-  @include no-margin-padding();
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 </style>

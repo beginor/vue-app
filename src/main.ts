@@ -5,7 +5,7 @@ import antDv from 'ant-design-vue';
 import App from './app.vue';
 import { routes } from './app-routes';
 
-import './main.scss';
+import './main.css';
 
 const elementId = 'app';
 const container = document.getElementById(elementId);
