@@ -16,26 +16,20 @@
     </a-menu>
   </a-layout-header>
 </template>
-<style lang="scss">
-@import './src/variables';
-
+<style lang="css">
 .app-header {
-
   /* background-color: var(--bs-white); */
-
-  .app-logo {
-    float: left;
-    width: 166px;
-    height: 31px;
-    margin: 16px 24px 16px 0;
-    background: rgba(255, 255, 255, 0.3);
-  }
+}
+.app-logo {
+  float: left;
+  width: 166px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
 }
 
-#ant-row-rtl {
-  .app-logo {
-    float: right;
-    margin: 16px 0 16px 24px;
-  }
+#ant-row-rtl .app-logo {
+  float: right;
+  margin: 16px 0 16px 24px;
 }
 </style>

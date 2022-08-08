@@ -40,12 +40,12 @@
     </a-menu>
   </a-layout-sider>
 </template>
-<style lang="scss">
+<style lang="css">
 .app-sidebar {
     background-color: var(--bs-white);
+}
 
-    .app-sidebar-menu {
-        height: 100%;
-    }
+.app-sidebar-menu {
+    height: 100%;
 }
 </style>
