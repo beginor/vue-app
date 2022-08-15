@@ -1,5 +1,5 @@
 {
-  "name": "rollup-starter",
+  "name": "@beginor/rollup-starter",
   "version": "1.0.0",
   "description": "rollup starter kit",
   "main": "index.html",
