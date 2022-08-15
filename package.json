@@ -1,7 +1,7 @@
 {
-  "name": "rollup-starter",
+  "name": "@beginor/rollup-vue",
   "version": "1.0.0",
-  "description": "rollup starter kit",
+  "description": "rollup vue starter kit",
   "main": "index.html",
   "scripts": {
     "build": "pnpm run clean && pnpm run rollup && pnpm run sass",
