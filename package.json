@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "rollup starter kit",
   "main": "index.html",
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=7.0.0"
+  },
   "scripts": {
     "build": "pnpm run clean && pnpm run rollup && pnpm run sass",
     "build-app": "pnpm run clean-app && pnpm run rollup && pnpm run sass",
