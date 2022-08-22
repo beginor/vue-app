@@ -9,5 +9,5 @@ import('./app').then(m => {
     const app = new m.App(container);
     app.run();
 }).catch(ex => {
-    console.error(ex);
+    console.error(ex);//
 });
