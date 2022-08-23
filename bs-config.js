@@ -11,5 +11,5 @@ module.exports = {
     index: 'index.html'
   },
   open: false,
-  cors: false
+  cors: true
 };
