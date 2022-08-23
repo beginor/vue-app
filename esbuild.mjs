@@ -1,4 +1,4 @@
-import { createOptions, esbuild } from './esbuild.options.mjs';
+import { createOptions, esbuild } from './scripts/esbuild-helper.mjs';
 
 const options = createOptions(
   [

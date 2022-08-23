@@ -20,8 +20,8 @@
     "dev": "pnpm run clean-app && concurrently \"pnpm run browser-sync\" \"pnpm run rollup-watch\" \"pnpm run sass-watch\"",
     "start": "pnpm run clean && pnpm run dev",
     "test": "echo test",
-    "esbuild": "node esbuild.config.mjs --prod",
-    "esbuild-watch": "node esbuild.config.mjs --watch"
+    "esbuild": "node esbuild.mjs --prod",
+    "esbuild-watch": "node esbuild.mjs --watch"
   },
   "repository": {
     "type": "git",
