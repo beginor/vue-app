@@ -8,11 +8,11 @@ const watching = argv.indexOf('--watch') > -1;
 options.watch = !watching ? false : {
   onRebuild(error, result) {
     if (error) {
-      console.error('Watch build failed: ');
+      console.error('watch build failed: ');
       console.error(JSON.stringify(error, undefined, 2));
     }
     else {
-      console.log('Watch build succeeded: ');
+      console.log('watch build succeeded: ');
       console.error(JSON.stringify(result, undefined, 2));
     }
   }
