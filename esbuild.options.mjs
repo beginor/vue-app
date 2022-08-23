@@ -11,6 +11,7 @@ const options = {
   format: 'esm',
   bundle: true,
   minify: production,
+  sourcemap: !production,
   legalComments: 'none',
   splitting: true,
   chunkNames: "chunks/[name]",
