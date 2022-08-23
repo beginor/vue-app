@@ -20,7 +20,8 @@ const options = {
     'tslib',
     'bootstrap',
     '@popperjs/core',
-  ]
+  ],
+  plugins:[],
 };
 
 export default options;
