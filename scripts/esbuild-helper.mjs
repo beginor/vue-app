@@ -1,5 +1,7 @@
 import { build } from 'esbuild';
 
+import vue from './esbuild-plugin-vue.mjs';
+
 const argv = process.argv;
 const production = argv.indexOf('--prod') > -1;
 const watching = argv.indexOf('--watch') > -1;
@@ -26,8 +28,11 @@ function createOptions(entryPoints, output) {
       'tslib',
       'bootstrap',
       '@popperjs/core',
+      'vue*'
     ],
-    plugins:[],
+    plugins:[
+      vue()
+    ],
   };
   if (output.endsWith('/')) {
     options.outdir = output;

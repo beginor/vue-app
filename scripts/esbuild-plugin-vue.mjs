@@ -48,7 +48,7 @@ const plugin = () => {
         const isTs = script?.lang === 'ts' || scriptSetup?.lang === 'ts';
         const id = filePath;
 
-        let contents = ``;
+        let contents = '';
         let scriptContent = 'export default {}';
 
         if (!!scriptSetup) {
@@ -61,14 +61,14 @@ const plugin = () => {
         contents += '\n';
 
         if (!!template) {
-          const compiledTpl = compileTemplate({
+          const compileResult = compileTemplate({
             id,
             source: template.content,
             filename: filePath,
             isProd: process.argv.indexOf('--prod') > -1,
             slotted: sfc.descriptor.slotted
           });
-          contents += compiledTpl.code;
+          contents += compileResult.code;
 
           contents += '_sfc_script.render = render\n';
           contents += `_sfc_script.__file = '${path.relative(absPath, filePath).replace(/\\/g, '/')}'\n`;
