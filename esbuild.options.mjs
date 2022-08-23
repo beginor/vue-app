@@ -20,7 +20,9 @@ const options = {
     'tslib',
     'bootstrap',
     '@popperjs/core',
-  ]
+    'vue*',
+  ],
+  plugins: [],
 };
 
 export default options;

@@ -1,6 +1,7 @@
 import { build } from 'esbuild';
 
 import options from './esbuild.options.mjs';
+import vuePlugin from './esbuild-plugin-vue.mjs';
 
 const argv = process.argv;
 const watching = argv.indexOf('--watch') > -1;
@@ -17,6 +18,8 @@ options.watch = !watching ? false : {
     }
   }
 };
+
+options.plugins.push(vuePlugin());
 
 const start = Date.now();
 
