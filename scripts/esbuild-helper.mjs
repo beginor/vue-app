@@ -28,10 +28,10 @@ function createOptions(entryPoints, output) {
       'tslib',
       'bootstrap',
       '@popperjs/core',
-      'vue*'
+      'vue*',
     ],
     plugins:[
-      vue()
+      vue(),
     ],
   };
   if (output.endsWith('/')) {
