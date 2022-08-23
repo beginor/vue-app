@@ -28,10 +28,11 @@ function createOptions(entryPoints, output) {
       'tslib',
       'bootstrap',
       '@popperjs/core',
-      'vue*'
+      'vue*',
+      'ant-design-vue',
     ],
     plugins:[
-      vue()
+      vue(),
     ],
   };
   if (output.endsWith('/')) {
